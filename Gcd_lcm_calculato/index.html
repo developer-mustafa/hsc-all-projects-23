@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GCD and LCM Calculator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    body {
+  background-color: #212121;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #35c8f9;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: antiquewhite;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1.4em;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#result {
+  font-size: 1.5em;
+  margin: 10px auto;
+  width: 80%;
+  height: 25vh;
+  color: #0ed51b;
+  background-color: #030303;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+span {
+  color: rgb(232, 157, 19);
+}
+
+a {
+  text-decoration: none;
+  color: #35c8f9;
+  font-weight: bold;
+}
+
+.warning {
+  color: #ff4081;
+}
+
+div>h4 {
+  color: rgb(174, 172, 172);
+  text-align: center;
+  
+}
+
+.h4 {
+  margin: 10px auto;
+}
+  </style>
+  </head>
+  
+  <body>
+    <h1>GCD and LCM Calculator</h1>
+    <h2>HSC Batch: <span>2023</span></h2>
+    <input type="number" id="inputNumber1" placeholder="Enter first number" />
+    <input type="number" id="inputNumber2" placeholder="Enter second number" />
+    <button onclick="calculate()">Calculate</button>
+  
+    <h4 class="h4"><span>Warning!</span> Maximum number: <span class="warning">1000</span></h4>
+    <div id="result">
+      <p>Result here</p>
+    </div>
+    <footer>
+      &copy Developed by <a href="https://mustafa-portfolio1.netlify.app/">Mustafa Rahman</a>
+      <br> <a style="color:#B2BEB5" href="tel:+8801840643946">Call us at 01840643946</a>
+    </footer>
+
+    
+
+
+    <script>
+      function calculate() {
+          const num1 = parseInt(document.getElementById("inputNumber1").value);
+          const num2 = parseInt(document.getElementById("inputNumber2").value);
+
+          if (isNaN(num1) || isNaN(num2)) {
+            document.getElementById("result").innerHTML =
+              "<p>Please enter valid numbers!</p>";
+          } else if (num1 < 0 || num2 < 0 || num1 > 1000 || num2 > 1000) {
+            document.getElementById("result").innerHTML =
+              "<p>Numbers should be between 0 and 1000!</p>";
+          } else {
+            let gcd = 1;
+            for (let i = 1; i <= num1 && i <= num2; i++) {
+              if (num1 % i === 0 && num2 % i === 0) {
+                gcd = i;
+              }
+            }
+            let lcm = (num1 * num2) / gcd;
+
+            document.getElementById("result").innerHTML = `
+      <p>${num1} and ${num2} GCD is: ${gcd}</p>
+      <p>${num1} and ${num2} LCM is: ${lcm}</p>
+    `;
+          }
+        }
+
+    </script>
+    </body>
+    
+    </html>

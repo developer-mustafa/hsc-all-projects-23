@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fibonacci Series Generator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    body {
+      background-color: #212121;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 0px;
+    }
+
+    h1 {
+      color: #35c8f9;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: antiquewhite;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 1.4em;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+   #result {
+  font-size: 1.5em;
+  margin: 40px auto;
+  width: 80%;
+  height: auto;
+  min-height: 25vh;
+  color: #0ed51b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+
+    span {
+      color: rgb(232, 157, 19);
+    }
+
+    a {
+      text-decoration: none;
+      color: #35c8f9;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #ff4081;
+    }
+
+    div>h4 {
+      color: rgb(174, 172, 172);
+      text-align: center;
+    }
+
+    .h4 {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fibonacci Series</h1>
+  <h2>HSC Batch: <span>2023</span></h2>
+
+  <input type="number" id="inputNumber" placeholder="Enter a number" />
+
+  <button onclick="calculateFibonacci()">Calculate</button>
+
+  <h4 class="h4"><span>Warning!</span> Maximum number: <span class="warning">0 to 100</span></h4>
+
+  <div id="result">
+    <p id="placeholder">Result will be show</p>
+  </div>
+
+
+  <footer>
+    &copy Developed by <a href="https://www.linkedin.com/in/developer-mustafa/">Mustafa Rahman</a>
+    <br> <a style="color:#B2BEB5" href="tel:+8801840643946">Call us at 01840643946</a>
+  </footer>
+
+
+
+  <script>
+    function calculateFibonacci() {
+        const inputNumber = document.getElementById("inputNumber").value;
+        const resultDisplay = document.getElementById("result");
+        const placeholder = document.getElementById("placeholder");
+
+        if (inputNumber >= 0 && inputNumber <= 100) {
+          let fib = [0, 1];
+          for (let i = 2; i <= inputNumber; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+          }
+          let fibSeries = fib.slice(0, inputNumber + 1);
+          resultDisplay.innerText = fibSeries.join(", ");
+          placeholder.style.display = "none";
+        } else if (inputNumber < 0) {
+          resultDisplay.innerText = "Please enter a positive number.";
+          placeholder.style.display = "none";
+        } else if (inputNumber > 100) {
+          resultDisplay.innerText = "Maximum value is 100.";
+          placeholder.style.display = "none";
+        } else {
+          resultDisplay.innerText = "Invalid input.";
+          placeholder.style.display = "none";
+        }
+      }
+
+
+
+
+  </script>
+
+</body>
+
+</html>
+

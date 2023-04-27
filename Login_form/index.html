@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+        body {
+            background-color: #181e52;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            margin: 10px auto;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        form {
+            background-color: #9bd6ee;
+            height: 600px;
+            
+            width: 85%;
+            margin:70px auto;
+            box-shadow: 2px 2px  15px white;
+            border-radius: 10px;
+        }
+
+        .facebook {
+            height: auto;
+            width: 100%;
+
+
+        }
+
+        .facebook img {
+            width: 10%;
+            display: block;
+            margin: 0px auto;
+            margin-bottom: 10px;
+
+        }
+
+        .facebook h2 {
+            text-align: center;
+            padding-top: 50px;
+
+
+        }
+
+        form a {
+            text-decoration: none;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .form {
+
+
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin:20px auto;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 15px 25px;
+            background-color: #f0e2b6;
+            border: none;
+            margin: 7px;
+            border-radius: 5px;
+            outline: none;
+
+        }
+        footer{
+            text-align: center;
+            margin-top: 110px; 
+            font-size: 22px;  
+        }
+        footer a{
+            text-decoration: none;
+            color:rgb(241, 110, 110);
+            font-weight: bold;
+            
+        }
+        button {
+            
+            padding: 15px 25px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            margin: 7px auto;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+
+        button:hover {
+            background-color: #f0e2b6;
+            cursor: pointer;
+        }
+
+        @media (min-width: 568px) {
+        
+            input[type="text"],
+            input[type="password"] {
+                width: 30%;
+                margin: 7px auto;
+
+
+            }
+        }
+
+        @media (max-width:567px) {
+            .facebook img {
+                width: 36%;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <form>
+
+        <div class="facebook">
+            <h2>Facebook login</h2>
+            <img src="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo-500x313.png" alt="facebook-logo">
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Mobile number or email">
+            <input type="password" placeholder="Password">
+            <button>Login</button>
+            <a href="#">Forgot password?</a>
+        </div>
+        <footer><a href="https://mustafa-portfolio1.netlify.app/" target="_blank">Developed by Mustafa Rahman</a></footer>
+    </form>
+    
+</body>
+
+</html>

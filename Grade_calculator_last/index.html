@@ -1,0 +1,133 @@
+<!-- গ্রেড চ্যাক করার ওয়েবসাইট (সি পোগ্রাম কনসেপ্ট)
+Developed by Mustafa Rahman  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result Calculator</title>
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+      body {
+        background-color: #212121;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        padding: 0px;
+      }
+
+      h1 {
+        color: #35c8f9;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        font-size: 1.8em;
+        color: antiquewhite;
+      }
+
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 1.4em;
+        outline:none;
+
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #ff4081;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+
+      #result {
+        font-size: 3em;
+        margin: 40px auto;
+        width: 80%;
+        height: 25vh;
+        color: #0ed51b;
+      }
+      span {
+        color: rgb(232, 157, 19);
+      }
+      a {
+        text-decoration: none;
+        color:  #35c8f9;
+        font-weight: bold;
+      }
+      .warning{
+        color:#ff4081;
+      }
+      div>h4{
+        color:rgb(174, 172, 172);
+        text-align: center;
+      }
+      .h4{
+        margin:0 auto;
+      }
+    </style>
+  </head>
+
+<!-- কোড শুরু -->
+  <body>
+    <h1>Grade Calculator</h1>
+    <h2>HSC Batch: <span>2023</span></h2>
+
+    <input type="number" id="inputNumber" placeholder="Enter your result" />
+
+    <button onclick="calculateResult()">Calculate</button>
+
+    
+      <h4 class="h4"><span>Warning!</span> Maximum number:   <span class="warning">0 to 100</span></h4>
+    
+    <div id="result"></div>
+
+    <footer>
+      &copy Developed by <a href="https://www.linkedin.com/in/developer-mustafa/">Mustafa Rahman</a>
+     <br> <a style="color:#B2BEB5" href="tel:+8801840643946">Call us at 01840643946</a>
+
+    </footer>
+
+
+
+    <!-- এখানে জাবাস্ক্রিপ্ট কোড ইমপ্লিমেন্ট করা হয়েছে -->
+    <script>
+      function calculateResult() {
+        const inputNumber = document.getElementById("inputNumber").value;
+        const resultDisplay = document.getElementById("result");
+        let resultGrade;
+
+        if (inputNumber >= 80 && inputNumber <= 100) {
+          resultGrade = "A+";
+        } else if (inputNumber >= 70 && inputNumber < 80) {
+          resultGrade = "A";
+        } else if (inputNumber >= 60 && inputNumber < 70) {
+          resultGrade = "A-";
+        } else if (inputNumber >= 50 && inputNumber < 60) {
+          resultGrade = "B";
+        } else if (inputNumber >= 40 && inputNumber < 50) {
+          resultGrade = "C";
+        } else if (inputNumber >= 33 && inputNumber < 40) {
+          resultGrade = "D";
+        } else if (inputNumber >= 0 && inputNumber < 33) {
+          resultGrade = "F";
+        } else {
+          resultGrade = "wrong!";
+        }
+
+        resultDisplay.innerText = resultGrade;
+      }
+    </script>
+  </body>
+
+  <!-- কোড শেষ -->
+</html>

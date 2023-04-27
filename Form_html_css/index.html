@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+        body {
+            background-color: #278cea;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        form {
+            padding: 5px 30px;
+            padding-bottom:50px ;
+            width: 80%;
+
+            background-color: #3b3b3b;
+            color: rgb(223, 222, 220);
+            font-size: 20px;
+            margin:40px auto;
+            border-radius: 10px;
+            box-shadow: 3px 3px 30px white;
+            
+        }
+
+        input {
+            margin: 7px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            outline: none;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 2px solid #e85353;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e85353;
+            color: #e7e1e1;
+            font-size: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #b52525;
+            cursor: pointer;
+        }
+
+        select {
+            padding: 10px 40px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f0ab0a;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            font-size: 20px;
+            border-radius: 10px;
+            color: #070707;
+            width: 100%;
+            height: 200px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            transform: scale(2);
+
+        }
+        footer{
+            text-align: center;
+            
+        }
+        footer a{
+            
+            margin: 7px;
+            text-decoration: none;
+            color:#f0ab0a;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <form>
+        <h1>Form Fill-up: </h1>
+        <textarea>
+Additional Information
+Send us Message here      
+        </textarea>
+
+        <hr>
+        <div>
+            <Label>Select your Exam:</Label>
+            <select>
+                <option value="">SSC</option>
+                <option value="">HSC</option>
+                <option value="">BSC</option>
+                <option value="">MSC</option>
+            </select>
+        </div>
+        <hr>
+        <div>
+            <label>First Name:</label>
+            <input type="text" placeholder="Enter first Name">
+        </div>
+
+        <div>
+            <label>Last Name:</label>
+            <input type="text" placeholder="Enter Last Name">
+        </div>
+        <button>submit</button>
+        <hr>
+        <div>
+            <label>Password:</label>
+            <input type="password">
+        </div>
+
+        <p>Notice this concern all regulatory should be considered and follow our term and condition:
+        </p>
+
+        <button>Please click me</button>
+        <hr>
+        <div>
+            <p> I have a bike.<input type="checkbox"></p>
+            <p> I have a car.<input type="checkbox"></p>
+            <p>I have a airplane.<input type="checkbox"></p>
+            <button>submit</button>
+            <hr>
+        </div>
+
+        <div>
+            <label>Male</label>
+            <input type="radio" name="gender" id="male">
+        </div>
+        <div>
+            <label>Female</label>
+            <input type="radio" name="gender" id="female">
+        </div>
+        <button>submit</button>
+        <hr>
+
+        <footer><a href="https://mustafa-portfolio1.netlify.app/" target="_blank">Developed by Mustafa Rahman</a></footer>
+    </form>
+   
+</body>
+
+</html>
