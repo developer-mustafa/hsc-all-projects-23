@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arithmetic Series Generator</title>
+  <style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    /* Global styles */
+    body {
+      background-color: #212121;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 0px;
+      overflow-y: scroll;
+      margin: 0;
+
+    }
+
+    h1 {
+      color: #35c8f9;
+      margin: 20px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: antiquewhite;
+      margin: 0;
+      padding: 0;
+    }
+
+    .input-field {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 6px;
+      font-size: 1.4em;
+      outline: none;
+      color: #333;
+      font-weight: 500;
+      width: 280px;
+    }
+
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 3px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 1.5em;
+      margin: 3px auto;
+      width: 80%;
+      min-height: 100px;
+      color: #0ed51b;
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #333;
+    }
+
+    #result span {
+      color: #e89d13;
+    }
+
+    a {
+      text-decoration: none;
+      color: #35c8f9;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #ff4081;
+    }
+
+    div>h4 {
+      color: #aeacac;
+      text-align: center;
+    }
+
+    .h4 {
+      margin: 0 auto;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <h1>Arithmetic Series Generator</h1>
+<h2>HSC Batch: <span>2023</span></h2>
+  <div class="container">
+    <input type="number" id="a1" class="input-field" placeholder="First number:" required><br><br>
+
+    <input type="number" id="f" class="input-field" placeholder="Common difference:" required><br><br>
+
+
+    <input type="number" id="n" class="input-field" placeholder="Nth number to obtain:" required><br><br>
+
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="clearScreen()">Clear</button>
+    <br><br>
+    <div id="result"></div>
+  </div>
+
+  <footer>
+    &copy Developed by <a href="https://www.linkedin.com/in/developer-mustafa/">Mustafa Rahman</a>
+    <br> <a style="color:#B2BEB5" href="tel:+8801840643946">Call us at 01840643946</a>
+
+  </footer>
+
+  <script>
+    function calculate() {
+      // Get input values from the user
+      var a1 = parseFloat(document.getElementById("a1").value);
+      var f = parseFloat(document.getElementById("f").value);
+      var n = parseFloat(document.getElementById("n").value);
+
+      // Calculate the nth term of the sequence
+      var an = a1 + f * (n - 1);
+
+      // Calculate the sum of the sequence up to the nth term
+      var sum = (n / 2) * (2 * a1 + (n - 1) * f);
+
+      // Display the sequence, the nth term, and the sum
+      var sequence = "";
+      for (var i = 0; i < n; i++) {
+        sequence += (a1 + i * f) + ", ";
+      }
+      document.getElementById("result").innerHTML = "Sequence: " + sequence.slice(0, -2) + "<br>" + "nth term: " + an + "<br>" + an + ' ' + "term of Sum: " + sum;
+
+      return false; // Add this to prevent default button behavior
+    }
+
+    function clearScreen() {
+      // Clear the input values and the result
+      document.getElementById("a1").value = "";
+      document.getElementById("f").value = "";
+      document.getElementById("n").value = "";
+      document.getElementById("result").innerHTML = "";
+    }
+  </script>
+</body>
+
+</html>

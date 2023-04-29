@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series Calculator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    body {
+      background-color: #212121;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 0px;
+    }
+
+    h1 {
+      color: #35c8f9;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: antiquewhite;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 1.4em;
+      outline: none;
+
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    #result {
+      font-size: 1.5em;
+      margin: 40px auto;
+      width: 80%;
+      min-height: 100px;
+      color: #0ed51b;
+      text-align: left;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #333;
+    }
+
+    #result span {
+      color: rgb(232, 157, 19);
+    }
+
+    a {
+      text-decoration: none;
+      color: #35c8f9;
+      font-weight: bold;
+    }
+
+    .warning {
+      color: #ff4081;
+    }
+
+    div>h4 {
+      color: rgb(174, 172, 172);
+      text-align: center;
+    }
+
+    .h4 {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+
+<body>
+  <h1>Series Calculator</h1>
+  <h2>Enter the nth value</h2>
+
+  <input type="number" id="inputNumber" placeholder="Enter the value of n" />
+  <input type="text" id="inputSeries" placeholder="Enter the series (comma-separated)" />
+
+  <button onclick="calculateSeries()">Calculate</button>
+
+  <h4 class="h4"><span>Warning!</span> Maximum value: <span class="warning">1000</span></h4>
+
+  <div id="result"></div>
+
+  <footer>
+    &copy Developed by <a href="https://www.linkedin.com/in/developer-mustafa/">Mustafa Rahman</a>
+    <br> <a style="color:#B2BEB5" href="tel:+8801840643946">Call us at 01840643946</a>
+  </footer>
+</body>
+
+
+<script>
+  function calculateSeries() {
+      const inputNumber = parseInt(document.getElementById("inputNumber").value);
+      const inputSeries = document.getElementById("inputSeries").value.split(",");
+      const resultDisplay = document.getElementById("result");
+      let arithmeticSeries = '';
+      let arithmeticSum = 0;
+      let geometricSum = 0;
+      let geometricSeries = '';
+      let firstTerm = 1;
+      let ratio = 2;
+
+      // validation for maximum input value
+      if (inputNumber > 100000) {
+        resultDisplay.innerHTML = "Maximum input value exceeded. Please enter a smaller value.";
+        return;
+      }
+
+     // arithmetic series and sum calculation
+    let prevTerm = 0;
+    let arithmeticDiff;
+    for (let i = 1; i <= inputNumber; i++) {
+      const term = parseInt(inputSeries[i - 1]);
+      arithmeticSeries += term + ', ';
+      arithmeticSum += term;
+      if (i > 1) {
+        const diff = term - prevTerm;
+        if (arithmeticDiff === '') {
+          arithmeticDiff = diff;
+        } else if (arithmeticDiff !== diff) {
+          arithmeticDiff = 'N/A';
+        }
+      }
+      prevTerm = term;
+    }
+
+
+      // geometric series and sum calculation
+      for (let i = 0; i < inputNumber; i++) {
+        let term = firstTerm * Math.pow(ratio, i);
+        geometricSeries += term + ', ';
+        geometricSum += term;
+      }
+
+      // geometric series calculation
+      let nthTerm = firstTerm * Math.pow(ratio, inputNumber - 1);
+      geometricSum = (firstTerm * (Math.pow(ratio, inputNumber) - 1)) / (ratio - 1);
+      let commonRatio = ratio.toFixed(2);
+
+      // display the results
+      resultDisplay.innerHTML = `
+    <div>n = ${inputNumber}</div>
+    <div>Questions Series = ${inputSeries}</div>
+
+    <div>Arithmetic Series = ${arithmeticSeries}</div>
+    <div>Sum of Arithmetic Series = ${arithmeticSum}</div>
+    <div>Difference of Arithmetic Series = ${arithmeticDiff}</div>
+
+    <div>Geometric Series = ${geometricSeries}</div>
+    <div>Sum of Geometric Series = ${geometricSum}</div>
+    <div>Geometric Series r = ${commonRatio}</div>
+  `;
+    }
+
+</script>
+</html>
