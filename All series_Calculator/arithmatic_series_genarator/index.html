@@ -2,7 +2,10 @@
 <html>
 
 <head>
-  <title>Arithmetic Series Generator</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Series Genarator</title>
   <style>
     /* Import Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -71,6 +74,10 @@
       color: #e89d13;
     }
 
+    span {
+      color: #e89d13;
+    }
+
     a {
       text-decoration: none;
       color: #35c8f9;
@@ -96,20 +103,20 @@
 
 <body>
   <h1>Arithmetic Series Generator</h1>
-<h2>HSC Batch: <span>2023</span></h2>
-  <div class="container">
-    <input type="number" id="a1" class="input-field" placeholder="First number:" required><br><br>
+  <h2>HSC Batch: <span>2023</span></h2>
 
-    <input type="number" id="f" class="input-field" placeholder="Common difference:" required><br><br>
+  <input type="number" id="a1" class="input-field" placeholder="First number:" required><br><br>
+
+  <input type="number" id="f" class="input-field" placeholder="Common difference:" required><br><br>
 
 
-    <input type="number" id="n" class="input-field" placeholder="Nth number to obtain:" required><br><br>
+  <input type="number" id="n" class="input-field" placeholder="Number of terms:" required><br><br>
 
-    <button onclick="calculate()">Calculate</button>
-    <button onclick="clearScreen()">Clear</button>
-    <br><br>
-    <div id="result"></div>
-  </div>
+  <button onclick="calculate()">Generator</button>
+  <button onclick="clearScreen()">Clear</button>
+  <br><br>
+  <div id="result"></div>
+
 
   <footer>
     &copy Developed by <a href="https://www.linkedin.com/in/developer-mustafa/">Mustafa Rahman</a>
