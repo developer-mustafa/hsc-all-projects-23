@@ -32,6 +32,7 @@
       border: none;
       border-radius: 5px;
       margin-top: 13px;
+      margin-bottom:6px ;
       font-size: 1.4em;
       outline: none;
     }
@@ -49,7 +50,8 @@
 
     #output {
       font-size: 1.5em;
-      margin: 40px auto;
+      margin: 0 auto;
+      margin-top: 10px;
       width: 80%;
       min-height: 25vh;
       color: #0ed51b;
@@ -97,7 +99,7 @@
     }
 
     footer {
-      margin-top: 100px;
+      margin-top: 70px;
     }
   </style>
 </head>
@@ -158,8 +160,7 @@
           const nthValue = seqArray[0] + commonDiff * (seqArray.length - 1);
           const sum = (seqArray[0] + nthValue) * seqArray.length / 2;
           outputDiv.innerHTML = `<p>Sequence: ${seqArray.join(", ")} </p>
-                           
-                              <p> sum of ${seqArray.length}'th = ${sum}</p>`;
+                                 <p> sum of ${seqArray.length}'th = ${sum}</p>`;
         } else {
           outputDiv.innerHTML = "<p class='warning'>This is not an arithmetic sequence!</p>";
         }
