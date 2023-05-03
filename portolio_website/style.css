@@ -1,0 +1,31 @@
+/* Dark mode */
+  .dark-mode {
+    background-color: #111;
+    color: #fff;
+  }
+  
+  .dark-mode a {
+    color:aqua;
+  }
+  
+  /* Navbar spacing */
+  .navbar-nav {
+    gap: 1rem;
+  }
+  
+  /* Font size */
+  body {
+    font-size: 1rem;
+    background-color: #111;
+    color:aqua;
+
+  }
+  section {
+  margin-top: 100px;
+}
+
+  @media (min-width: 768px) {
+    body {
+      font-size: 1.25rem;
+    }
+  }

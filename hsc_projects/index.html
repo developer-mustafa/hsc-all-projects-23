@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outstanding Posts</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css"
+    integrity="sha512-4VKaA/NZSdSf7fgGnL4oh+vJcynQ/FXq3fjEHsWJgIDLEcAeCfZIT1eJew49lLpFndzj9XUIl22umC45awoOyw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+    body {
+      background: #0F2027;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      font-family: 'Poppins', sans-serif;
+      color: antiquewhite;
+      
+    }
+
+    .post-outstanding {
+      border: 2px solid #08c8cf;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 20px;
+      background: #000428;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #004e92, #000428);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #004e92, #000428);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      font-family: 'Hind Siliguri', sans-serif;
+      
+
+
+
+    }
+
+    .post-outstanding:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .post-outstanding img {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .post-content {
+      padding: 20px;
+      color: white;
+    }
+
+    .post-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: rgb(234, 203, 27);
+      font-family: 'Hind Siliguri', sans-serif;
+      font-weight: 700;
+    }
+
+    .post-content h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: rgb(60, 222, 231);
+      font-family: 'Berkshire Swash', cursive;
+    }
+
+    .post-content a {
+      display: inline-block;
+      background-color: #cd0e4e;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .post-content a:hover {
+      background-color: #ae0d43;
+    }
+
+    .post-outstanding img {
+      max-width: 150px;
+      height: auto;
+      border-radius: 50%;
+      padding-left: 30px;
+      margin-top: 20px;
+    }
+
+    nav {
+      background: #192a56;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #0b8793, #192a56);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #0b8793, #192a56);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    nav a {
+      box-shadow: 0 0 10px transparent;
+      border-radius: 10px;
+    }
+
+    nav a:hover {
+      box-shadow: 0 0 10px skyblue;
+
+
+    }
+
+    .title:hover {
+      color: #f1c32e;
+      box-shadow: none;
+    }
+
+    @media only screen and (max-width: 680px) {
+      nav a:hover {
+        box-shadow: none;
+      }
+
+      .container a:hover {
+        color: #f1c32e;
+      }
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="title navbar-brand nav-link link-info icon-link-hover" href="index.html">Learn with Mustafa Rahman</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="link-info nav-link fs-5" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="link-info nav-link fs-5" href="projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="link-info nav-link fs-5" href="service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="link-info nav-link fs-5" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="col-12 my-5 p-4">
+      <h2 class="text-info">Total Projects: <span class="text-warning" id="all-post">0</span></h2>
+    </div>
+
+    <div class="row d-flex flex-row flex-wrap" id='container'>
+
+      <div class="col-12 col-md-6 col-lg-6 mb-4">
+        <div class="post-outstanding">
+          <a href="https://mustafa-portfolio1.netlify.app/"><a href="https://mustafa-portfolio1.netlify.app/"><img
+                src="img/mustafa.jpg" alt="Post Image" class="img-fluid"></a></a>
+          <div class="post-content">
+            <h2>ফরম পূরণ প্রজেক্ট <span class="text-light">০১</span></h2>
+            <h4>Mustafa rahman</h4>
+            <a href="https://forms23.netlify.app/ ">দেখতে ক্লিক করুন</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 mb-4">
+        <div class="post-outstanding">
+          <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+              class="img-fluid"></a>
+          <div class="post-content">
+            <h2>ফেসবুক লগইন পেজ প্রজেক্ট <span class="text-light">০২</span></h2>
+            <h4> Mustafa rahman</h4>
+            <a href="https://logins23.netlify.app/">দেখতে ক্লিক করুন</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12  col-md-6 col-lg-6 mb-4">
+        <div class="post-outstanding">
+          <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+              class="img-fluid"></a>
+          <div class="post-content">
+            <h2>নেভবার HTML-CSS প্রজেক্ট <span class="text-light">০৩</span></h2>
+            <h4>Mustafa rahman</h4>
+            <a href="https://navbarcss23.netlify.app/">দেখতে ক্লিক করুন</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-6 mb-4">
+        <div class="post-outstanding">
+          <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+              class="img-fluid"></a>
+          <div class="post-content">
+            <h2>নেভবার Bootstrap প্রজেক্ট<span class="text-light">
+                ০৪ </span></h2>
+            <h4>Mustafa rahman</h4>
+            <a href="https://navbar-bootstrap23.netlify.app/ ">দেখতে ক্লিক করুন</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12  col-md-6 col-lg-6 mb-4">
+        <div class="post-outstanding">
+          <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+              class="img-fluid"></a>
+          <div class="post-content">
+            <h2>গ্রেডিং ক্যালকুলেটর প্রজেক্ট<span class="text-light"> ০৫
+
+              </span></h2>
+            <h4>Mustafa rahman</h4>
+            <a href="https://grade23.netlify.app/"">দেখতে ক্লিক করুন</a>
+          </div>
+        </div>
+      </div>
+      <div class=" col-12 col-md-6 col-lg-6 mb-4">
+              <div class="post-outstanding">
+                <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                    class="img-fluid"></a>
+                <div class="post-content">
+                  <h2>ফ্যাক্টোরিয়াল সংখ্যা নির্ণয় প্রজেক্ট<span class="text-light"> ০৬ </span></h2>
+                  <h4>Mustafa rahman</h4>
+                  <a href="https://factorial23.netlify.app">দেখতে ক্লিক করুন</a>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="col-12 col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>মৌলিক সংখ্যা যাচাই প্রজেক্ট <span class="text-light"> ০৭ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://prime-number23.netlify.app/ ">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>ফিবোনাচ্চি সংখ্যা নির্ণয় প্রজেক্ট<span class="text-light"> ০৮ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://fibonacci23.netlify.app">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>গ,সা,গু ও ল,সা,গু নির্ণয় প্রজেক্ট<span class="text-light"> ০৯ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://gcdlcm23.netlify.app">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-12 col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>লিপ ইয়ার নির্ণয় প্রজেক্ট<span class="text-light"> ১০ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://leapyear23.netlify.app/ ">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>সমান্তর ধারা জেনারেটর প্রজেক্ট<span class="text-light"> ১১ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://arithmatic-series-genarator23.netlify.app/">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>সমান্তর ধারা শনাক্তকরণ প্রজেক্ট<span class="text-light"> ১২ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://arithmatic-series-detector23.netlify.app">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>সমকোনী ত্রিভুজের ক্ষেত্রফল নির্ণয় প্রজেক্ট<span class="text-light"> ১৩ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://right-angel-area23.netlify.app">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>সমবাহু ত্রিভুজের ক্ষেত্রফল নির্ণয় প্রজেক্ট<span class="text-light"> ১৪ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://equilateral-trianle-area23.netlify.app">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>সমদ্বিবাহু ত্রিভুজের ক্ষেত্রফল নির্ণয় প্রজেক্ট<span class="text-light"> ১৫</span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://isoceles-triangel-area.netlify.app/">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>বিষমবাহু ত্রিভুজের ক্ষেত্রফল নির্ণয় প্রজেক্ট <span class="text-light"> ১৬ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://scalene-triangel23.netlify.app/">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>বৃত্তের ক্ষেত্রফল নির্ণয় প্রজেক্ট<span class="text-light"> ১৭ </span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://circle-area23.netlify.app/">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>ট্রাপিজিয়ামের ক্ষেত্রফল নির্ণয় প্রজেক্ট<span class="text-light"> ১৮</span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="#">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>সিম্পল পোর্টফোলিও প্রজেক্ট<span class="text-light"> ১৯</span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://hscportfolio23.netlify.app">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12  col-md-6 col-lg-6 mb-4">
+            <div class="post-outstanding">
+              <a href="https://mustafa-portfolio1.netlify.app/"><img src="img/mustafa.jpg" alt="Post Image"
+                  class="img-fluid"></a>
+              <div class="post-content">
+                <h2>রেজিস্ট্রেশন ফরম প্রজেক্ট<span class="text-light"> ২০</span></h2>
+                <h4>Mustafa rahman</h4>
+                <a href="https://registration23.netlify.app/">দেখতে ক্লিক করুন</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+        crossorigin="anonymous"></script>
+
+      <script>
+        const container = document.getElementById('container');
+        const allPost = document.getElementById('all-post');
+
+        let childCount = container.children.length;
+        allPost.innerHTML = childCount;
+
+
+      </script>
+</body>
+
+</html>
