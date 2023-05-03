@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form submit</title>
+  <!-- add toastify -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <section class="form">
+    <form action="" id="form">
+      <h2>Registration</h2>
+      <input type="text" name="fName" id="" placeholder="First Name">
+      <input type="text" name="lName" id="" placeholder="Last Name">
+      <input type="password" name="password" id="" placeholder="password">
+      <select name="select" id="">
+        <option value="" selected>Select your country</option>
+        <option value="bangladesh">Bangladesh</option>
+        <option value="japan">japan</option>
+        <option value="india">india</option>
+        <option value="pakistan">pakistan</option>
+      </select>
+      <textarea name="textarea" placeholder="address: mirsarai,chattogram"></textarea>
+      <button id="btnSubmit" onclick="showSubmitNotification()">submit</button>
+    </form>
+  </section>
+<footer>
+  <a href="https://mustafa-portfolio1.netlify.app/">Developed by <span>Mustafa Rahman</span></a>
+  <a class="call" href="tel:+8801840643946">call us at: 01840643946</a>
+</footer>
+
+
+  <script src="./form.js"></script>
+</body>
+</html>
